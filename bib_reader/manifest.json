@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "arXiv Quick Import",
+    "version": "0.1",
+    "permissions": ["downloads"],
+    "host_permissions": ["https://arxiv.org/*"],
+    "background": { "service_worker": "background.js" },
+    "content_scripts": [
+      {
+        "matches": ["https://arxiv.org/abs/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
